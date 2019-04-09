@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.ftr_navi ul li{
+    list-style: none;
+}
+.ftr_navi ul li:hover{
+    color: baise;
+}
+.footer_wrap {
+    padding: 4em 0;
+    background-color: #242424;
+}
+h3{
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;/*设置字母的间距*/
+    font-size: 1.4em;
+    margin-bottom: .5em;
+    color: #fff;
+}
+.ftr_navi ul li{
+    display: block;
+    padding: 5px 0;
+    color: #848484;
+    font-size: 14px;
+}
+.touch p{
+    color: #848484;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.foot_right{
+    margin-top:30px ;
+    margin-bottom: 20px;
+}
+.foot_right span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+.baise1{
+    background: url("../images/icon-tb.png") no-repeat -10px -14px;
+}
+.baise2{
+    background: url("../images/icon-tb.png") no-repeat -50px -14px;
+}
+.baise3{
+    background: url("../images/icon-tb.png") no-repeat -90px -14px;
+}
+.baise1:hover{
+    background-position:-10px -60px ;
+}
+.baise2:hover{
+    background-position:-50px -59px ;
+}
+.baise3:hover{
+    background-position:-90px -59px ;
+}
+.spa h3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
+.spa h3 span{
+    font-size:15px;
+}
+
+
+
+@media (max-width:480px){ /* 在小于等于480px的屏上田字型显示*/
+    .ftr{
+        width: 50%;
+        margin: 0 0 1em;
+    }
+    .footer_wrap {
+        padding: 2em 0 1em;
+    }
+}
+@media (max-width: 320px){/*在小于等于320px的屏上 一列显示*/
+    .ftr{
+        width: 100%;
+    }
+}
+
+

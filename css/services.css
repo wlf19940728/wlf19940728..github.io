@@ -1,0 +1,136 @@
+.services{
+    padding: 5em 0;
+}
+.services>.container>h3{
+    color: #6ea145;
+    font-size: 2em;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.services_item{
+    text-align: center;
+    margin: 2em 0 0;
+}
+.services_item img{
+    display: block;
+    margin: 0 auto;
+}
+.services_item h4{
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 1em 0 0;
+    color: #6ea145;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.service_hide{
+    position: absolute;
+    top: 0;
+    left: 17%;
+    width: 66%;
+    text-align: center;
+    height: 250px;
+    background: rgba(110, 161, 69, 0.48);
+    display: none;
+    border-radius: 145px;
+}
+.service_hide h5{
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding-top: 4em;
+}
+.service_hide p{
+    font-size: 13px;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    margin: 1em auto 0;
+    line-height: 1.7em;
+}
+.services_item:hover>.service_hide{
+    display: block;
+}
+
+
+/*轮播*/
+.services_banner {
+    background: url(../images/5.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 600px;
+}
+
+.banner_wrap {
+    padding: 10em 0;
+    position: relative;
+}
+.service_info h3 {
+    color: #fff;
+    font-size: 4em;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+}
+.service_info p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.8em;
+    width: 70%;
+    margin: 1em auto 0;
+}
+.banner_nav {
+    z-index: 2;
+    position: absolute;
+    width: 93px;
+    height: 22px;
+    margin: auto;
+    top: 96%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.banner_nav li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    width: 22px;
+    height: 5px;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.banner_nav li.active {
+    background: #6ea145;
+}
+
+.services_last{
+    padding: 5em 0;
+}
+
+.best_item .item_left span {
+    font-size: 3em;
+    color: #c6c5c0;
+}
+
+.best_item .item_right h4 {
+    color: #c6c5c0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    margin: 0 0 1em;
+}
+
+.best_item .item_right p {
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.8em;
+}
+
+
+
+
