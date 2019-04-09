@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/services.css">
+
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="services">
+        <div class="container">
+            <h3>services</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 services_item">
+                    <img src="images/2.png" alt=" " class="img-responsive">
+                    <h4> est eligendi optio cumque nihil impedit quo minus id quod</h4>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum
+                        necessitatibus saepe eveniet ut et voluptates repudiandae sint.</p>
+                    <div class="more ">
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="service_hide">
+                        <h5>Specialist</h5>
+                        <p>Voluptates repudiandae sint et
+                            molestiae.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 services_item">
+                    <img src="images/3.png" alt=" " class="img-responsive">
+                    <h4> est eligendi optio cumque nihil impedit quo minus id quod</h4>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum
+                        necessitatibus saepe eveniet ut et voluptates repudiandae sint.</p>
+                    <div class="more m1">
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="service_hide">
+                        <h5>Specialist</h5>
+                        <p>Voluptates repudiandae sint et
+                            molestiae.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 services_item">
+                    <img src="images/4.png" alt=" " class="img-responsive">
+                    <h4> est eligendi optio cumque nihil impedit quo minus id quod</h4>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum
+                        necessitatibus saepe eveniet ut et voluptates repudiandae sint.</p>
+                    <div class="more m1">
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="service_hide">
+                        <h5>Specialist</h5>
+                        <p>Voluptates repudiandae sint et
+                            molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services_banner">
+        <div class="container">
+            <div class="banner_wrap">
+                <div class="banner_item">
+                    <div class="service_info"  >
+                        <h3>Temporibus autem quibusdam et aut officiis debitis aut rerum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula
+                            pretium, dui enim porta
+                            lectus, non euismod tortor ante eu libero.</p>
+                    </div>
+                </div>
+                <div class="banner_item" style="display: none;">
+                    <div class="service_info">
+                        <h3>consectetur autem quibusdam et aut officiis debitis</h3>
+                        <p>Lobortis ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula
+                            pretium, dui enim porta
+                            lectus, non euismod tortor ante eu libero.</p>
+                    </div>
+                </div>
+                <div class="banner_item" style="display: none;">
+                    <div class="service_info">
+                        <h3>adipiscing autem quibusdam et aut officiis debitis</h3>
+                        <p>Libero ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, ante interdum vehicula
+                            pretium, dui enim porta
+                            lectus, non euismod tortor ante eu libero.</p>
+                    </div>
+                </div>
+                <ul class="banner_nav">
+                    <li class="active"></li>
+                    <li></li>
+                    <li style="margin: 0"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var index=0;
+        $("ul.banner_nav li").click(function(){
+            index = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".banner_item").fadeOut(300).delay(300).eq(index).fadeIn(500);
+        })
+    </script>
+    <div class="services_last">
+        <div class="container">
+            <h3>The Best Services</h3>
+            <div class="row">
+                <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12 best_item">
+                    <div class="col-xs-3 item_left">
+                        <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-9 item_right">
+                        <h4>cum soluta nobis est eligendi optio cumque nihil consequatur</h4>
+                        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                            reiciendis voluptatibus maiores alias consequatur aut perferendis
+                            doloribus asperiores repellat.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12 best_item">
+                    <div class="col-xs-3 item_left">
+                        <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-9 item_right">
+                        <h4>cum soluta nobis est eligendi optio cumque nihil consequatur</h4>
+                        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                            reiciendis voluptatibus maiores alias consequatur aut perferendis
+                            doloribus asperiores repellat.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row" style="padding: 2em 0" >
+                <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12 best_item">
+                    <div class="col-xs-3 item_left">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-9 item_right">
+                        <h4>cum soluta nobis est eligendi optio cumque nihil consequatur</h4>
+                        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                            reiciendis voluptatibus maiores alias consequatur aut perferendis
+                            doloribus asperiores repellat.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12 best_item">
+                    <div class="col-xs-3 item_left">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-9 item_right">
+                        <h4>cum soluta nobis est eligendi optio cumque nihil consequatur</h4>
+                        <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                            reiciendis voluptatibus maiores alias consequatur aut perferendis
+                            doloribus asperiores repellat.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script>
+    $('#header').load('header1.html');
+    $('#footer').load('footer.html')
+</script>

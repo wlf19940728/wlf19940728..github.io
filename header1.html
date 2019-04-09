@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header1.css">
+
+
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- header wrap-->
+<div class="header_wrap">
+    <div class="header_content">
+        <!-- header -->
+        <div class="left">
+            <span class="ye glyphicon glyphicon-leaf"></span>
+            <span class="title">Spa</span>
+            <span class="magic">Magic Of Soul</span>
+        </div>
+
+        <div class="right">
+            <span class="white1"></span>
+            <span class="white2"></span>
+            <span class="white3"></span>
+        </div>
+
+        <div class="mid">
+            <div class="header_con" id="header1" style="background:#6ea145 ">
+                <div class="beijing"></div>
+                <span class="a">Home</span><br/>
+                <span class="glyphicon glyphicon-home"></span>
+            </div>
+            <div class="header_con ">
+                <div class="beijing"></div>
+                <span class="a">Services</span><br/>
+                <span class="glyphicon glyphicon-hand-right"></span>
+            </div>
+            <div class="header_con ">
+                <div class="beijing"></div>
+                <span class="a">About</span><br/>
+                <span class="glyphicon glyphicon-star-empty"></span>
+            </div>
+            <div class="header_con ">
+                <div class="beijing"></div>
+                <span class="a">Blog</span><br/>
+                <span class="glyphicon glyphicon-picture"></span>
+            </div>
+            <div class="header_con ">
+                <div class="beijing"></div>
+                <span class="a">Contact</span><br/>
+                <span class="glyphicon glyphicon-envelope"></span>
+            </div>
+        </div>
+        <div class="HIDE">
+            <span><img src="images/menu.png" alt=""></span>
+            <div class="list">
+                <div class="list_span" style="background: #6ea145">
+                    <div class="beijing"></div>
+                    <span class="a">Home</span><br/>
+                    <span class="glyphicon glyphicon-home"></span>
+                </div>
+                <div class="list_span">
+                    <div class="beijing"></div>
+                    <span class="a ">Services</span><br/>
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="list_span">
+                    <div class="beijing"></div>
+                    <span class="a">About</span><br/>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <div class="list_span">
+                    <div class="beijing"></div>
+                    <span class="a">Blog</span><br/>
+                    <span class="glyphicon glyphicon-picture"></span>
+                </div>
+                <div class="list_span">
+                    <div class="beijing"></div>
+                    <span class="a">Contact</span><br/>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header_foot">
+        <h1>Feeling The Life In A Different Way</h1>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.</p>
+        <div class="more">
+            <a href="javascript:;">Learn More</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $('.HIDE>span').click(function(){
+        $('.HIDE .list').stop().slideToggle(1000)
+    });
+    $('.list_span').hover(function(){
+        $(this).find('.beijing').stop().slideToggle()
+    });
+    $('.header_con').hover(function(){
+        $(this).find('.beijing').stop().slideToggle()
+    })
+</script>
+

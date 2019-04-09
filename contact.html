@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D1nmvD0t6ScQjdmTbKuC7H4tTsGKGfK5"></script>
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="contact">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <div id="allmap" class="baidu_map">
+                <div style="width:100%;height:400px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+            </div>
+            <div class="row contact_wrap">
+                <div class="col-lg-4 col-md-4  contact_wrap_left">
+                    <h4>Address :</h4>
+                    <p>Eiusmod Tempor inc</p>
+                    <p>9560 St Dolore Place,</p>
+                    <p>Telephone : +1 800 603 6035</p>
+                    <p>FAX : +1 800 889 9898</p>
+                </div>
+                <div class="col-lg-8 col-md-8 contact_wrap_right">
+                    <h4>Contact Form</h4>
+                    <form>
+                        <input type="text" value="" placeholder="Name">
+                        <input type="email" value="" placeholder="Email">
+                        <input type="text" value="" placeholder="Telephone">
+                        <textarea type="text" placeholder="Message..."></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script>
+    $('#header').load('header1.html');
+    $('#footer').load('footer.html');
+</script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(116.587611,30.640236),15);
+    }
+    function setMapEvent(){
+//        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+        target.addEventListener("click",function(){
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay(){
+        var markers = [
+            {content:'<div style="margin:0;line-height:20px;padding:2px;width: 310px;">' +
+            '<img src="images/xiaoniao_icon.png" alt="" style="float:right;zoom:1;margin-top:9px;overflow:hidden;width:90px;height:90px;margin-left:3px;"/>' +
+            '地址：北京市昌平区站前东街2号<br/>电话：(010)028-8888888<br/>简介：田园风光综合商业楼3层，为小鸟掌学综合研发及办公地址。' +
+            '</div>',imageOffset: {width:0,height:-21},position:{lat:30.636507,lng:116.582724}}
+        ];
+        for(var index = 0; index < markers.length; index++ ){
+            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+            var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+            })});
+            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+            marker.setLabel(label);
+            addClickHandler(marker,infoWindow);
+            map.addOverlay(marker);
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);//跳动动画
+            marker.addEventListener("click", function (e) {//给marker 添加 点击事件
+                this.openInfoWindow(infoWindow);
+            })
+        };
+    }
+    //向地图添加控件
+    function addMapControl(){
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+        map.addControl(overviewControl);
+        map.addControl(new BMap.MapTypeControl());//三维地图控件
+
+    }
+    var map;
+    initMap();
+</script>
